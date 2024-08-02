@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-lookbook-wrapper {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(255, 235, 235);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .main-lookbook-img-wrapper {
+            width: 80%;
+            height: 80vh;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-lookbook-img {
+            position: relative; /* Set relative positioning */
+        }
+
+        .main-lookbook-img img {
+            width: 100%; /* Make image width responsive */
+            max-width: 700px; /* Max width to maintain aspect ratio */
+            height: auto; /* Adjust height automatically */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .focus-point-one,
+        .focus-point-two,
+        .focus-point-three,
+        .focus-point-four,
+        .focus-point-five {
+            position: absolute; /* Set absolute positioning */
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(218, 212, 252);
+            border: 1px solid rgb(111, 120, 243);
+            z-index: 10; /* Ensure it is on top of the image */
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Ensure content does not overflow */
+        }
+
+        .focus-point-one {
+            top: 15%; /* Adjust to your preference */
+            left: 42%; /* Adjust to your preference */
+        }
+
+        .focus-point-two {
+            top: 50%; /* Adjust to your preference */
+            left: 31%; /* Adjust to your preference */
+        }
+
+        .focus-point-three {
+            top: 65%; /* Adjust to your preference */
+            left: 58%; /* Adjust to your preference */
+        }
+
+        .focus-point-four {
+            top: 77%; /* Adjust to your preference */
+            left: 80%; /* Adjust to your preference */
+        }
+
+        .focus-point-five {
+            top: 82%; /* Adjust to your preference */
+            left: 50%; /* Adjust to your preference */
+        }
+
+        .main-lookbook-img:hover img,
+        .main-lookbook-img:hover .focus-point-one,
+        .main-lookbook-img:hover .focus-point-two,
+        .main-lookbook-img:hover .focus-point-three,
+        .main-lookbook-img:hover .focus-point-four,
+        .main-lookbook-img:hover .focus-point-five {
+            transform: scale(1.1);
+        }
+
+        .focus-point-one:hover,
+        .focus-point-two:hover,
+        .focus-point-three:hover,
+        .focus-point-four:hover,
+        .focus-point-five:hover {
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            transform: scale(2.2); /* Increase scale value to make it pop up more */
+            z-index: 20; /* Increase z-index to ensure it appears above other elements */
+            color: white; /* Make text visible */
+        }
+
+        .focus-point-one span,
+        .focus-point-two span,
+        .focus-point-three span,
+        .focus-point-four span,
+        .focus-point-five span {
+            display: none; /* Hide text initially */
+            font-size: 14px; /* Adjust font size to fit inside the circle */
+        }
+
+        .focus-point-one:hover span,
+        .focus-point-two:hover span,
+        .focus-point-three:hover span,
+        .focus-point-four:hover span,
+        .focus-point-five:hover span {
+            display: block; /* Show text on hover */
+        }
+
+        /* Media queries for mobile responsiveness */
+        @media (max-width: 768px) {
+            .main-lookbook-wrapper {
+                height: auto; /* Adjust height for smaller screens */
+                padding: 20px;
+            }
+
+            .main-lookbook-img-wrapper {
+                width: 100%; /* Full width for smaller screens */
+                height: auto; /* Adjust height automatically */
+            }
+
+            .main-lookbook-img img {
+                max-width: 100%; /* Full width for smaller screens */
+                height: auto; /* Adjust height automatically */
+            }
+
+            .focus-point-one,
+            .focus-point-two,
+            .focus-point-three,
+            .focus-point-four,
+            .focus-point-five {
+                width: 15px; /* Smaller width for smaller screens */
+                height: 15px; /* Smaller height for smaller screens */
+            }
+
+            .focus-point-one:hover,
+            .focus-point-two:hover,
+            .focus-point-three:hover,
+            .focus-point-four:hover,
+            .focus-point-five:hover {
+                width: 30px; /* Adjusted scale for smaller screens */
+                height: 30px; /* Adjusted scale for smaller screens */
+                transform: scale(2); /* Adjust scale value */
+            }
+
+            .focus-point-one span,
+            .focus-point-two span,
+            .focus-point-three span,
+            .focus-point-four span,
+            .focus-point-five span {
+                font-size: 10px; /* Adjust font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="main-lookbook-wrapper">
+    <div class="main-lookbook-img-wrapper">
+        <div class="main-lookbook-img">
+            <img src="images/—Pngtree—cartoon woman practicing yoga sittinglegged_4071060.png" />
+            <div class="focus-point-one"><a href="https://www.marvel.com/characters/iron-man-tony-stark"><span>head</span></a></div>
+            <div class="focus-point-two"><a href="https://www.marvel.com/characters/iron-man-tony-stark"><span>point 2</span></a></div>
+            <div class="focus-point-three"><a href="https://www.marvel.com/characters/iron-man-tony-stark"><span>point 3</span></a></div>
+            <div class="focus-point-four"><a href="https://www.marvel.com/characters/iron-man-tony-stark"><span>point 4</span></a></div>
+            <div class="focus-point-five"><a href="https://www.marvel.com/characters/iron-man-tony-stark"><span>point 5</span></a></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
